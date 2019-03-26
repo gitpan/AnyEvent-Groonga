@@ -286,6 +286,7 @@ sub _load_filter {
         $json =~ s/\\/\\\\\\\\/g;
         $json =~ s/'/\\'/g;
         $json =~ s/"/\\"/g;
+        $json =~ s/`/\\`/g;
     }
     if ( ref $data ne 'ARRAY' ) {
         $json = '[' . $json . ']';
